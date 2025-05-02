@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUELP</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" rel="stylesheet">
-    <style>
-        * {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STUELP</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" rel="stylesheet">
+  <style>
+     * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -47,7 +47,7 @@
             transition: all 0.3s ease;
         }
         .logo:hover {
-            color: #161616;
+            color: grey;
         }
         nav ul {
             display: flex;
@@ -63,7 +63,7 @@
             transition: color 0.3s ease;
         }
         nav ul li a:hover {
-            color: #161616;
+            color: grey;
         }
         .main-content {
             margin-top: 80px;
@@ -178,10 +178,10 @@
             transform: translateY(20px);
         }
         .resource-button:nth-child(1) {
-            animation: fadeInUp 0.8s 0.6s forwards;
+            animation: fadeInUp 0.5s 0.2s forwards;
         }
         .resource-button:nth-child(2) {
-            animation: fadeInUp 0.8s 0.8s forwards;
+            animation: fadeInUp 0.5s 0.3s forwards;
         }
         .resource-button:hover {
             background: #161616;
@@ -189,136 +189,51 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(255,255,255,0.1);
         }
-    </style>
+    body {
+      font-family: 'Muli', sans-serif;
+      background-color: black;
+      color: white;
+    }
+    header, nav, .container, .hero, .resources {
+      /* Styles omitted for brevity */
+    }
+    .resource-button {
+      background: white;
+      color: black;
+      padding: 15px 30px;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">STUELP</a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="main-content">
-        <div class="container">
-            <section id="home" class="hero">
-                <h2>Welcome to STUELP</h2>
-                <p>Your one-stop solution for academic resources</p>
-            </section>
-
-            <section id="resources" class="selection-area">
-                <h2>Access Your Study Materials</h2>
-                <p>Select your year and branch:</p>
-                <div class="dropdown-container">
-                    <div class="custom-dropdown">
-                        <button class="dropdown-btn" id="yearBtn">Select Year</button>
-                        <div class="dropdown-content" id="yearDropdown">
-                            <a href="#" data-value="1">First Year</a>
-                            <a href="#" data-value="2">Second Year</a>
-                            <a href="#" data-value="3">Third Year</a>
-                            <a href="#" data-value="4">Fourth Year</a>
-                        </div>
-                    </div>
-                    <div class="custom-dropdown" id="branchDropdownContainer" style="display: none;">
-                        <button class="dropdown-btn" id="branchBtn">Select Branch</button>
-                        <div class="dropdown-content" id="branchDropdown">
-                            <a href="#" data-value="cs">Computer Science</a>
-                            <a href="#" data-value="ee">Electrical Engineering</a>
-                            <a href="#" data-value="me">Mechanical Engineering</a>
-                            <a href="#" data-value="me">Electronics Engineering</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="resources">
-                    <a href="#" class="resource-button" id="notesBtn">NOTES</a>
-                    <a href="#" class="resource-button" id="videosBtn">VIDEOS</a>
-                </div>
-            </section>
-        </div>
+  <header>
+    <div class="container">
+      <a href="NewIndex.html" class="logo">STUELP</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.style.background = 'black';
-                } else {
-                    header.style.background = '#161616';
-                }
-            });
-
-            // Dropdown functionality
-            const dropdowns = document.querySelectorAll('.custom-dropdown');
-            dropdowns.forEach(dropdown => {
-                const btn = dropdown.querySelector('.dropdown-btn');
-                const content = dropdown.querySelector('.dropdown-content');
-
-                btn.addEventListener('click', () => {
-                    content.classList.toggle('show');
-                });
-
-                content.addEventListener('click', (e) => {
-                    if (e.target.tagName === 'A') {
-                        btn.textContent = e.target.textContent;
-                        btn.dataset.value = e.target.dataset.value;
-                        content.classList.remove('show');
-
-                        if (btn.id === 'yearBtn') {
-                            const branchDropdownContainer = document.getElementById('branchDropdownContainer');
-                            if (btn.dataset.value === '1') {
-                                branchDropdownContainer.style.display = 'none';
-                            } else {
-                                branchDropdownContainer.style.display = 'block';
-                            }
-                        }
-                    }
-                });
-
-                window.addEventListener('click', (e) => {
-                    if (!dropdown.contains(e.target)) {
-                        content.classList.remove('show');
-                    }
-                });
-            });
-
-            // Resource buttons functionality
-            const notesBtn = document.getElementById('notesBtn');
-            const videosBtn = document.getElementById('videosBtn');
-            const yearBtn = document.getElementById('yearBtn');
-            const branchBtn = document.getElementById('branchBtn');
-
-            function navigateToResource(resourceType) {
-                const year = yearBtn.dataset.value;
-                const branch = year === '1' ? 'common' : branchBtn.dataset.value;
-                
-                if (year) {
-                    if (year !== '1' && !branch) {
-                        alert('Please select both year and branch before proceeding.');
-                    } else {
-                        window.location.href = `subjects.html?year=${year}&branch=${branch}&resourceType=${resourceType}`;
-                    }
-                } else {
-                    alert('Please select a year before proceeding.');
-                }
-            }
-
-            notesBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                navigateToResource('notes');
-            });
-
-            videosBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                navigateToResource('videos');
-            });
-        });
-    </script>
+  </header>
+  <div class="main-content">
+    <div class="container">
+      <section id="home" class="hero">
+        <h2>Welcome to STUELP</h2>
+        <p>Your one-stop solution for academic resources</p>
+      </section>
+      <section id="resources">
+        
+        <div class="resources">
+          <a href="NewSubjects.html?year=2&branch=cs&resourceType=notes" class="resource-button">NOTES</a>
+          <a href="#" class="resource-button">VIDEOS</a>
+        </div>
+      </section>
+    </div>
+  </div>
 </body>
 </html>
