@@ -95,19 +95,17 @@
       list-style-type: none;
       padding: 0;
     }
-    .subject-item {
-      background: black;
-      color: white;
-      padding: 15px 20px;
-      margin: 10px 0;
-      text-align-last: center;
-      text-decoration: none;
-      display: block;
-      transition: all 0.3s ease;
-      opacity: 0;
-      transform: translateY(10px);
-    }
-.subject-item {
+  .subject-item {
+  display: block;
+  background: black;
+  color: white;
+  padding: 15px 20px;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
   animation: fadeInUp 1.0s forwards;
 }
     .subject-item:hover {
@@ -192,20 +190,18 @@ const subjectList = document.getElementById('subjectList');
 
       if (subjects[year] && subjects[year][branch]) {
         subjects[year][branch].forEach(subject => {
-          const li = document.createElement('li');
-          li.classList.add('subject-item');
-          
           const a = document.createElement('a');
           a.href = driveLinks[subject];
+          a.target = '_blank';
+          a.classList.add('subject-item');
           a.textContent = subject;
-          a.target = '_blank';  // This ensures the link opens in a new tab
           a.onclick = function(event) {
-            window.open(a.href, '_blank');
-            event.preventDefault(); // Prevent the default link behavior
-          };
-          li.appendChild(a);
-          
-          subjectList.appendChild(li);
+          window.open(a.href, '_blank');
+          event.preventDefault();
+      };
+        li.appendChild(a);
+        subjectList.appendChild(a);
+
         });
       } else {
         subjectList.innerHTML = '<li class="subject-item">No subjects found for the selected year and branch.</li>';
