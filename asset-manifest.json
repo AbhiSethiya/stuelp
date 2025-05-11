@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/stuelp/static/css/main.2de4c4a8.css",
-    "main.js": "/stuelp/static/js/main.d476944c.js",
+    "main.js": "/stuelp/static/js/main.35f3d6a0.js",
     "index.html": "/stuelp/index.html",
     "main.2de4c4a8.css.map": "/stuelp/static/css/main.2de4c4a8.css.map",
-    "main.d476944c.js.map": "/stuelp/static/js/main.d476944c.js.map"
+    "main.35f3d6a0.js.map": "/stuelp/static/js/main.35f3d6a0.js.map"
   },
   "entrypoints": [
     "static/css/main.2de4c4a8.css",
-    "static/js/main.d476944c.js"
+    "static/js/main.35f3d6a0.js"
   ]
 }
