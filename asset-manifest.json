@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/stuelp/static/css/main.b4e4c33e.css",
+    "main.css": "/stuelp/static/css/main.55c9bf8a.css",
     "main.js": "/stuelp/static/js/main.35f3d6a0.js",
     "static/media/muli-latin-900-italic.woff": "/stuelp/static/media/muli-latin-900-italic.b5f75511f78fe0e1410c.woff",
     "static/media/muli-latin-900italic.woff": "/stuelp/static/media/muli-latin-900italic.0ba0efb0fe338e81164e.woff",
@@ -67,11 +67,11 @@
     "static/media/muli-latin-300.woff2": "/stuelp/static/media/muli-latin-300.7848ba436e7b015290f8.woff2",
     "static/media/muli-latin-300-normal.woff2": "/stuelp/static/media/muli-latin-300-normal.b9d66d4bb0d1f8e5d84e.woff2",
     "index.html": "/stuelp/index.html",
-    "main.b4e4c33e.css.map": "/stuelp/static/css/main.b4e4c33e.css.map",
+    "main.55c9bf8a.css.map": "/stuelp/static/css/main.55c9bf8a.css.map",
     "main.35f3d6a0.js.map": "/stuelp/static/js/main.35f3d6a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4e4c33e.css",
+    "static/css/main.55c9bf8a.css",
     "static/js/main.35f3d6a0.js"
   ]
 }
