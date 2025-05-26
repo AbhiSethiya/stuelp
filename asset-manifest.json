@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/stuelp/static/css/main.55c9bf8a.css",
-    "main.js": "/stuelp/static/js/main.35f3d6a0.js",
+    "main.css": "/stuelp/static/css/main.2cdb4f6f.css",
+    "main.js": "/stuelp/static/js/main.7efcfefc.js",
     "static/media/muli-latin-900-italic.woff": "/stuelp/static/media/muli-latin-900-italic.b5f75511f78fe0e1410c.woff",
     "static/media/muli-latin-900italic.woff": "/stuelp/static/media/muli-latin-900italic.0ba0efb0fe338e81164e.woff",
     "static/media/muli-latin-700-italic.woff": "/stuelp/static/media/muli-latin-700-italic.92c0ee85b15c5d85b00d.woff",
@@ -67,11 +67,11 @@
     "static/media/muli-latin-300.woff2": "/stuelp/static/media/muli-latin-300.7848ba436e7b015290f8.woff2",
     "static/media/muli-latin-300-normal.woff2": "/stuelp/static/media/muli-latin-300-normal.b9d66d4bb0d1f8e5d84e.woff2",
     "index.html": "/stuelp/index.html",
-    "main.55c9bf8a.css.map": "/stuelp/static/css/main.55c9bf8a.css.map",
-    "main.35f3d6a0.js.map": "/stuelp/static/js/main.35f3d6a0.js.map"
+    "main.2cdb4f6f.css.map": "/stuelp/static/css/main.2cdb4f6f.css.map",
+    "main.7efcfefc.js.map": "/stuelp/static/js/main.7efcfefc.js.map"
   },
   "entrypoints": [
-    "static/css/main.55c9bf8a.css",
-    "static/js/main.35f3d6a0.js"
+    "static/css/main.2cdb4f6f.css",
+    "static/js/main.7efcfefc.js"
   ]
 }
